@@ -1,0 +1,182 @@
+#games {
+  align-items: center;
+}
+
+.tic-tac-toe {
+  background-color: #2c2c6c;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 55vmin;
+  margin: 0 auto;
+}
+
+.board {
+  padding: 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: rgba(77, 181, 255, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 80px;
+}
+
+.cell:hover {
+  background-color: #4db5ff;
+}
+
+.X {
+  color: #fff;
+}
+
+.O {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4db5ff;
+  animation: message-appear 0.5s ease;
+}
+
+@keyframes message-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  animation: score-appear 0.5s ease;
+}
+
+@keyframes score-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.player-score {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  animation: score-item-appear 0.5s ease;
+}
+
+@keyframes score-item-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reset-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4db5ff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: button-appear 0.5s ease;
+}
+
+.reset-button:hover {
+  background-color: rgba(77, 181, 255, 0.8);
+}
+
+@keyframes button-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional Styling */
+/* Add any additional styling you want for this section */
+
+@media screen and (max-width: 1024px) {
+  .tic-tac-toe {
+    width: 70vmin;
+  }
+
+  .board {
+    width: 100%;
+  }
+
+  .cell {
+    height: 80px;
+    font-size: 40px;
+  }
+
+  .message {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tic-tac-toe {
+    width: 70vmin;
+  }
+
+  .board {
+    width: 100%;
+  }
+
+  .cell {
+    height: 80px;
+    font-size: 40px;
+  }
+
+  .message {
+    font-size: 20px;
+  }
+}
+
+.cell.winning-cell {
+  background-color: red;
+  color: white;
+}
+
+
+.winning{
+  background-color: red !important;
+  color: white;
+}
+
